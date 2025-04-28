@@ -1,150 +1,182 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
-        <link rel="stylesheet" href="./assests/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="./assests/css/styles.css">
-        <link rel="icon" type="image/png" href="assests/images/logosg.webp">
-        <title>MonPortfolio</title>
-    </head>
-    <body>
-        <header class="header" id="header">
-            <nav class="nav container">
-                <a href="#" class="nav__logo">SG</a>
-                <div class="nav__menu" id="nav-menu">
-                    <ul class="nav__list grid">
-                        <li class="nav__item">
-                            <a href="#home" class="nav__link">
-                                <i class="uil uil-estate nav__icon"></i>Accueil
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#about" class="nav__link">
-                                <i class="uil uil-user nav__icon"></i>A propos
-                            </a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#skills" class="nav__link">
-                                <i class="uil uil-file-alt nav__icon"></i>Competences
-                            </a>
-                        </li>
-                          <li class="nav__item">
-                            <a href="#services" class="nav__link">
-                                <i class="uil uil-briefcase-alt nav__icon"></i>Services
-                            </a>
-                        </li>
-                        
-                        <li class="nav__item">
-                            <a href="#contact" class="nav__link">
-                                <i class="uil uil-message nav__icon"></i>Contacts                             
-                            </a>
-                        </li>
-                    </ul>
-                    <i class="uil uil-times nav__close" id="nav-close"></i>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="stylesheet" href="./assests/css/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assests/css/styles.css">
+    <link rel="icon" type="image/png" href="assests/images/OIP.jpeg" sizes="20x20">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <title>MonPortfolio</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="index.html" class="nav__logo">SG</a>
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">
+                            <i class="uil uil-estate nav__icon"></i>Accueil
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">
+                            <i class="uil uil-user nav__icon"></i>A propos
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link">
+                            <i class="uil uil-file-alt nav__icon"></i>Competences
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portfolio" class="nav__link">
+                            <i class="uil uil-scenery nav__icon"></i>Portfolio
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#services" class="nav__link">
+                            <i class="uil uil-briefcase-alt nav__icon"></i>Services
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">
+                            <i class="uil uil-message nav__icon"></i>Contacts
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            <div class="nav__btns">
+                <i class="uil uil-moon change-theme" id="theme-button"></i>
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="uil uil-apps"></i>
                 </div>
-                <div class="nav__btns">
-                    <!-- Theme change button -->
+            </div>
+        </nav>
+    </header>
 
-                    <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main class="main">
-            <section class="home section" id="home">
-                <div class="home__container container grid">
-                    <div class="home__content grid">
-                        <div class="home__social">
-                            <a href="https://www.linkedin.com/in/schiphra-grace-gneto-82136b304/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-linkedin-alt"></i>
-                            </a>
-                            <a href="https://www.instagram.com/schiphra_gneto/" target="_blank" class="home__social-icon">
-                                <i class="uil uil-instagram-alt"></i>
-                            </a>
-                            <a href="https://github.com/Elisa734" target="_blank" class="home__social-icon">
-                                <i class="uil uil-github-alt"></i>
-                            </a>
-                        </div>
-
-                        <div class="home__img">
-                            <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <mask id="mask0" mask-type="alpha">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                </mask>
-                                <g mask="url(#mask0)">
-                                    <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
-                                    <image class="home__blob-img" x="" href="assests/images/ladegaine.png"/>
-                                </g>
-                            </svg>
-                        </div>
-
-                        <div class="home__data">
-                            <h1 class="home__title">Salut, Je suis GNETO Schiphra Grace</h1>
-                            <h3 class="home__subtitle">Etudiante ,Amateuse</h3>
-                            <p class="home__description">Je suis etudiante en licence 3 de science informatique.</p>
-                            <a href="#contact" class="button button--flex home__button">
-                                Contactez Moi<i class="uil uil-message button__icon"></i>
-                            </a>
-                        </div>
+    <main class="main">
+        <!-- Home Section avec animation texte -->
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/schiphra-grace-gneto-82136b304/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://www.instagram.com/schiphra_gneto/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-instagram-alt"></i>
+                        </a>
+                        <a href="https://github.com/Elisa734" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
                     </div>
 
-                    <div class="home__scroll">
-                        <a href="#about" class="home__scroll-button button--flex">
-                            <i class="uil uil-mouse-alt home__scroll-mouse"></i>
-                            <span class="home__scroll-name">Descendre</span>
-                            <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                <image class="home__blob-img" xlink:href="assests/images/ladegaine.png"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="home__data">
+                        <h1 class="home__title">Salut tout le monde, </h1>
+                        <h1 class="home__subtitle"> </h1>
+                        <div class="text-container">
+                            
+                            <div id="typing-text" class="typing-text"></div>
+                        </div>
+                        <a href="#contact" class="button button--flex home__button">
+                            Contactez Moi<i class="uil uil-message button__icon"></i>
                         </a>
                     </div>
                 </div>
-            </section>
 
-        <!-- A props -->
-            <section class="about section" id="about">
-                <h2 class="section__title">A Propos de moi</h2>
-                <span class="section__subtitle">Mon introduction </span>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Descendre</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-                <div class="about__container container grid">
-                    <img src="assests/images/positia.jpg" alt="" class="about__img">
-                    <div class="about__data">
-                        <p class="about__description">
-                            Je suis une étudiante  passionnée de l’informatique . Ne cesse de se former mais n’a pas d’expérience professionnel. Je suis à la recherche d’une expérience professionnel qui pourra m'arranger avec mon emploi du temps scolaire.
-                        </p>
-                        <div class="about__info">
-                            <div>
-                                <span class="about__info-title">03+</span>
-                                <span class="about__info-name">Ans <br> Experience</span>
-                            </div>
-                            <div>
-                                <span class="about__info-title">05+</span>
-                                <span class="about__info-name">Completed <br> Certifications</span>
-                            </div>
-                            <div>
-                                <span class="about__info-title">00+</span>
-                                <span class="about__info-name">Pas encore d experience professionnel<br>En quete de stage dapprentissage</span>
+        <!-- À propos  -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <h2 class="section-title">À Propos de moi</h2>
+                <span class="section-subtitle">Découvrez mon parcours</span>
+                
+                <!-- Swiper Container pour les images -->
+                <div class="swiper about-swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Item 1: Photo 1 -->
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="assests/images/WhatsApp_Image_2025-04-23_at_19.19.52-removebg-preview (1).png" 
+                                     alt="Photo de profil 1" 
+                                     class="about-img">
                             </div>
                         </div>
-
-                        <div class="about__buttons">
-                            <a download="" href="assests/pdf/Mon CV.pdf" class="button button--flex">
-                                Telecharger  CV<i class="uil uil-download-alt button__icon"></i>
-                            </a>
+                        <!-- Item 2: Photo 2 -->
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="assests/images/WhatsApp Image 2025-04-23 at 19.13.48.jpeg" 
+                                     alt="Photo de profil 2" 
+                                     class="about-img">
+                            </div>
+                        </div>
+                        <!-- Item 3: Photo 3 -->
+                        <div class="swiper-slide">
+                            <div class="about-card">
+                                <img src="assests/images/WhatsApp Image 2025-04-23 at 19.19.53.jpeg" 
+                                     alt="Photo de profil 3" 
+                                     class="about-img">
+                            </div>
                         </div>
                     </div>
+                    <!-- Swiper Pagination -->
+                    <div class="swiper-pagination"></div>
+                    <!-- Swiper Navigation -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-            </section>
+        
+                <!-- Texte et bouton statiques -->
+                <div class="about-content">
+                    <p class="about-description">
+                        Étudiante en troisième année de licence à l'UFHB, je suis motivée par l’apprentissage continu et le développement de nouvelles compétences. Curieuse et engagée, je poursuis actuellement une licence en informatique tout en cherchant à enrichir mes connaissances et mon savoir-faire.
+                    </p>
+                    <div class="about-buttons">
+                        <a download="" href="assests/pdf/Mon CV.pdf" class="button">
+                            Télécharger CV
+                            <i class="uil uil-download-alt button-icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
 
-            <!-- Competence-->
+
+        <!-- Competence-->
             <section class="skills section" id="skills">
                 <h2 class="section__title">Competences</h2>
                 <span class="section__subtitle">Mes Niveaux</span>
@@ -156,7 +188,7 @@
                             <div class="skills__header">
                                 <i class="uil uil-analytics skills__icon"></i>
                                <div>
-                                   <h1 class="skills__title">Etudiante en science informatique</h1>
+                                   <p class="skills__title">Mes Acquis</p>
                                    <span class="skills__subtitle">A L UFHB</span>
                                </div>
 
@@ -165,7 +197,7 @@
                             <div class="skills__list grid">
                                 <div class="skills__data">
                                     <div class="skills__titles">
-                                        <h3 class="skills__name">Progammation Python,c</h3>
+                                        <h3 class="skills__name">Algorithme,Progammation Python,c,c++</h3>
                                         <span class="skills__number">60%</span>
                                     </div>
                                     <div class="skills__bar">
@@ -199,6 +231,24 @@
                                        <span class="skills__percentage skills__google"></span>
                                    </div>
                                </div>
+                               <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Developpement web</h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__google"></span>
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">Developpement d'application</h3>
+                                    <span class="skills__number">30%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__percentage skills__google"></span>
+                                </div>
+                            </div>
                             </div>
                         </div>
                          <!-- Competence  2 -->
@@ -206,12 +256,9 @@
                             <div class="skills__header">
                                 <i class="uil uil-money-bill skills__icon"></i>
                                <div>
-                                   <h1 class="skills__title">Inforaphie</h1>
-                                   <span class="skills__subtitle">En apprentissage</span>
+                                   <p class="skills__title">Autres</p>
+                                   
                                </div>
-                               <div class="about__container container grid">
-                                <img src="assests/images/affiche.jpg" alt="" class="about__img">
-                                <div class="about__data">
 
                                <i class="uil uil-angle-down skills__arrow"></i>
                             </div>
@@ -255,66 +302,13 @@
                             </div>
                         </div>
                     </div>
-
-                    <div>
-                        <!-- Competence 3 -->
-                        <div class="skills__content skills__close">
-                            <div class="skills__header">
-                               <i class="uil uil-brackets-curly skills__icon"></i>
-                               <div>
-                                   <h1 class="skills__title">developpement web</h1>
-                                   <span class="skills__subtitle">1 mois</span>
-                               </div>
-
-                               <i class="uil uil-angle-down skills__arrow"></i>
-                            </div>
-                            <div class="skills__list grid">
-                                <div class="skills__data">
-                                    <div class="skills__titles">
-                                        <h3 class="skills__name">HTML</h3>
-                                        <span class="skills__number">50%</span>
-                                    </div>
-                                    <div class="skills__bar">
-                                        <span class="skills__percentage skills__html"></span>
-                                    </div>
-                                </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">CSS</h3>
-                                       <span class="skills__number">60%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__css"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">JavaScript</h3>
-                                       <span class="skills__number">30%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__js"></span>
-                                   </div>
-                               </div>
-                               <div class="skills__data">
-                                   <div class="skills__titles">
-                                       <h3 class="skills__name">php</h3>
-                                       <span class="skills__number">5%</span>
-                                   </div>
-                                   <div class="skills__bar">
-                                       <span class="skills__percentage skills__wordpress"></span>
-                                   </div>
-                               </div>
-                           </div>
-                       </div>
-                    </div>
                 </div>
             </section>
 
               <!-- QUALIFICATION -->
         <section class="qualification__section">
             <h2 class="section__title">Qualification</h2>
-            <span class="section__subtitle">Mes informations personnels</span>
+            <span class="section__subtitle">Mon parcours</span>
 
             <div class="qualification__container container">
                 <div class="qualification__tabs">
@@ -336,10 +330,10 @@
              <div class="qualification__data">
                  <div>
                      <h3 class="qualification__title">Bac D</h3>
-                     <span class="qualification__subtitle">LYCee Classique d'Abidjan</span>
+                     <span class="qualification__subtitle">Lycee Classique d'Abidjan</span>
                      <div class="qualification__calendar">
                         <i class="uil uil-calendar-alt"></i>
-                        2021 - 2022
+                        2020 - 2021
                      </div>
                  </div>
 
@@ -358,23 +352,23 @@
                 </div>
 
                 <div>
-                    <h3 class="qualification__title">En quete de la licence</h3>
-                    <span class="qualification__subtitle">A l universite de cocody</span>
+                    <h3 class="qualification__title">Application de pointage</h3>
+                    <span class="qualification__subtitle">En licence 3</span>
                     <div class="qualification__calendar">
                        <i class="uil uil-calendar-alt"></i>
-                       2022....en cours
+                       2025
                     </div>
                 </div>
-            </div> 
+             </div> 
 
-            <!-- QUALIFICATION 3 --> 
-            <div class="qualification__data">
+             <!-- QUALIFICATION 3 --> 
+             <div class="qualification__data">
                 <div>
-                    <h3 class="qualification__title">Des certificatios cisco</h3>
-                    <span class="qualification__subtitle">Je me forme sur tout ce qui concerne l informatique</span>
+                    <h3 class="qualification__title">Licence 1</h3>
+                    <span class="qualification__subtitle">A l'UFHB</span>
                     <div class="qualification__calendar">
                        <i class="uil uil-calendar-alt"></i>
-                       Toujours en cours
+                       2021-2023
                     </div>
                 </div>
 
@@ -382,10 +376,10 @@
                     <span class="qualification__rounder"></span>
                     <span class="qualification__line"></span>
                 </div>
-            </div> 
+              </div> 
 
-            <!-- QUALIFICATION 4 --> 
-            <div class="qualification__data">
+             <!-- QUALIFICATION 4 --> 
+             <div class="qualification__data">
                 <div></div>
                 <div>
                     <span class="qualification__rounder"></span>
@@ -393,30 +387,77 @@
                 </div>
 
                 <div>
-                    <h3 class="qualification__title"> Certification a l introduction de la cybersecuite</h3>
-                    <span class="qualification__subtitle">Certification a l introduction de la datascience</span>
+                    <h3 class="qualification__title"> Site web</h3>
+                    <span class="qualification__subtitle">Licence 3</span>
                     <div class="qualification__calendar">
                        <i class="uil uil-calendar-alt"></i>
-                       2022
+                       2025
+                    </div>
+                </div>
+             </div>
+             <!-- QUALIFICATION 4 --> 
+             <div class="qualification__data">
+                <div>
+                    <h3 class="qualification__title">Licence 2 SI</h3>
+                    <span class="qualification__subtitle">A l'UFHB</span>
+                    <div class="qualification__calendar">
+                       <i class="uil uil-calendar-alt"></i>
+                       2023-2024
                     </div>
                 </div>
 
-                
+                <div>
+                    <span class="qualification__rounder"></span>
+                    <span class="qualification__line"></span>
+                </div>
             </div>
+
+            <!-- QUALIFICATION 5 --> 
+            <div class="qualification__data">
+                <div>
+                    <h3 class="qualification__title">Licence 3 SI</h3>
+                    <span class="qualification__subtitle">A l'UFHB</span>
+                    <div class="qualification__calendar">
+                       <i class="uil uil-calendar-alt"></i>
+                       2024-2025 En cours...
+                    </div>
+                </div>
+
+                <div>
+                    <span class="qualification__rounder"></span>
+                    <span class="qualification__line"></span>
+                </div>
+            </div>  
+             <!-- QUALIFICATION 6 --> 
+             <div class="qualification__data">
+                <div>
+                    <h3 class="qualification__title">Certifiations cisco</h3>
+                    <span class="qualification__subtitle">Sur le site</span>
+                    <div class="qualification__calendar">
+                       <i class="uil uil-calendar-alt"></i>
+                       De temps en temps
+                    </div>
+                </div>
+
+                <div>
+                    <span class="qualification__rounder"></span>
+                    <span class="qualification__line"></span>
+                </div>
+            </div>  
             </div>
         </section>
       
-        <!-- SERVICES -->
-        <section class="services section" id="services">
-            <h2 class="section__title">Recheche</h2>
-            <span class="section__subtitle">Je suis en attente pour les stages</span>
+         <!-- SERVICES -->
+         <section class="services section" id="services">
+            <h2 class="section__title">Services</h2>
+            <span class="section__subtitle">Qu'est ce que J'offre?</span>
 
             <div class="services__container container grid">
         <!-- SERVICES 1 -->  
         <div class="services__content">
             <div>
                 <i class="uil uil-analytics skills__icon"></i>
-                <h3 class="services__title">Les stages de formations<br></h3>
+                <h3 class="services__title">Solutions bureautique<br></h3>
             </div>
             <span class="button button--flex button--small button--link services__button">
                 Voir plus
@@ -425,97 +466,266 @@
 
             <div class="services__modal">
                 <div class="services__modal-content">
-                    <h4 class="services__modal-title">Tout ce qui concerne l’informatique <br></h4>
+                    <h4 class="services__modal-title">Solutions bureautique <br></h4>
                     <i class="uil uil-times services__modal-close"></i>
 
                     <ul class="services__modal-services grid">
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Le reseautage.......</p>
+                            <p>Saisie de texte ,de presentation....</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Libre pour vos differentes affiches</p>
+                            <p>avec Word ,</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>disponible pour vos differents sites web</p>
+                            <p>avec excel,</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>disponible pour la  programmation pour créer des scripts ou outils qui automatisent des tâches répétitives.</p>
+                            <p>Powepoint</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>  
         
-        <!-- SERVICES 3 -->
+        <!-- SERVICES 2 --> 
         <div class="services__content">
             <div>
-                <i class="uil uil-arrow services__icon"></i>
-                <h3 class="services__title">Devoleppement web <br></h3>
+                <i class="uil uil-money-bill skills__icon"></i>
+                <h3 class="services__title">Design<br> </h3>
             </div>
             <span class="button button--flex button--small button--link services__button">
-                Consulter mon github
+                Voir plus
                 <i class="uil uil-arrow-right button__icon"></i>
             </span>
 
             <div class="services__modal">
                 <div class="services__modal-content">
-                    <h4 class="services__modal-title">Infographiste<br></h4>
+                    <h4 class="services__modal-title">Je fais des affiches<br></h4>
                     <i class="uil uil-times services__modal-close"></i>
 
                     <ul class="services__modal-services grid">
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Allez sur canva pour voi mieux</p>
+                            <p>Carte de visite</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Les images a partir de photoshop sront disponible bientot</p>
+                            <p>carte d'invition pour tout Événement</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>Je cree des design Ux vec figma</p>
+                            <p>Logo</p>
                         </li>
 
                         <li class="services__modal-service">
                             <i class="uil uil-check-circle services__modal-icon"></i>
-                            <p>pas encore performante pour les backend dans deux mois je vous le promet</p>
+                            <p>Maquette</p>
                         </li>
                     </ul>
                 </div>
             </div>
+        </div>  
+       
+        <!-- SERVICES 3 -->
+        <div class="services__content">
+            <div>
+                <i class="uil uil-arrow services__icon"></i>
+                <h3 class="services__title">Developpement web<br></h3>
+            </div>
+            <span class="button button--flex button--small button--link services__button">
+                Voir plus
+                <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+                <div class="services__modal-content">
+                    <h4 class="services__modal-title">Developpement web<br></h4>
+                    <i class="uil uil-times services__modal-close"></i>
+
+                    <ul class="services__modal-services grid">
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Je developpe les interfaces des utiisateurs</p>
+                        </li>
+
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>je fais des webpages</p>
+                        </li>
+
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Je fais duUx design </p>
+                        </li>
+
+                        <li class="services__modal-service">
+                            <i class="uil uil-check-circle services__modal-icon"></i>
+                            <p>Je fais du responsive design</p>
+                    </ul>
+                </div>
+            </div>
         </div> 
+    </div>
+        </section>
+        
+        <!-- Portfolio Section -->
+<section id="portfolio" class="portfolio-section">
+    <div class="container">
+      <div class="section-intro">
+        <h3 class="section-subtitle animate-this">Portfolio</h3>
+        <h2 class="section-title animate-this">Mes Créations Graphiques</h2>
+        <p class="lead animate-this">Découvrez mes dernières affiches et réalisations graphiques.</p>
+      </div>
   
-       
-        </div>
-        </section>
-        
-       
-            <!-- ajoutons-->
-            <div class="swiper-button-next">
-                <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+      <div class="portfolio-grid">
+        <!-- Item 1 -->
+        <div class="portfolio-item animate-this">
+          <div class="portfolio-item-inner">
+            <img src="assests/images/afficcheevangelisation.jpeg" alt="Affiche 1" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">affiches d'Eglise </h3>
+                <p class="portfolio-category"></p>
+                <a href="assests/images/afficcheevangelisation.jpeg" class="portfolio-link" data-lightbox="portfolio" data-title="Campagne Publicitaire">
+                  <i class="uil uil-plus"></i>
+                </a>
+              </div>
             </div>
-
-            <div class="swiper-button-prev">
-                <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+        </div>
+  
+        <!-- Item 2 -->
+        <div class="portfolio-item animate-this">
+          <div class="portfolio-item-inner">
+            <img src="assests/images/affichemariage.jpeg" alt="Affiche 2" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Carte de mariage</h3>
+                <p class="portfolio-category">Affiche Événementielle</p>
+                <a href="assests/images/affichemariage.jpeg" class="portfolio-link" data-lightbox="portfolio" data-title="Événement Culturel">
+                  <i class="uil uil-plus"></i>
+                </a>
+              </div>
             </div>
+          </div>
+        </div>
+        <!-- Item 3 -->
+        <div class="portfolio-item animate-this">
+            <div class="portfolio-item-inner">
+              <img src="assests/images/affichecarte.jpeg" alt="Affiche 2" class="portfolio-img">
+              <div class="portfolio-overlay">
+                <div class="portfolio-info">
+                  <h3 class="portfolio-title">Carte de visite</h3>
+                  <p class="portfolio-category">carte</p>
+                  <a href="assests/images/affichecarte.jpeg" class="portfolio-link" data-lightbox="portfolio" data-title="Événement Culturel">
+                    <i class="uil uil-plus"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+  
+        <!-- Item 4 -->
+        <div class="portfolio-item animate-this">
+          <div class="portfolio-item-inner">
+            <img src="assests/images/afficheoli.jpeg" alt="Affiche 3" class="portfolio-img">
+            <div class="portfolio-overlay">
+              <div class="portfolio-info">
+                <h3 class="portfolio-title">Pour vendre</h3>
+                <p class="portfolio-category">Artiles</p>
+                <a href="assests/images/afficheoli.jpeg" class="portfolio-link" data-lightbox="portfolio" data-title="Pochette Album">
+                  <i class="uil uil-plus"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Ajoutez d'autres items selon vos besoins -->
+      </div>
+    </div>
+  </section>
+  <!-- PORTFOLIO -->
+  <section class="portfolio section" id="portfolio">
 
-            <!-- Adjoutons  -->
-            <div class="swiper-pagination"></div>
-            
-        
+    <h2 class="section__title">Sites web</h2>
+    <span class="section__subtitle">Mes sites recents</span>
+
+    <div class="portfolio__container container swiper-container">
+        <div class="swiper-wrapper">
+<!-- PORTFOLIO 1 -->
+
+    <div class="portfolio__content grid swiper-slide">
+        <img src="./assests/images/Capture d'écran archive.png" alt="" class="portfolio__img">
+
+        <div class="portfolio_">
+            <h3 class="portfolio__title">ARCHIVE-MI</h3>
+            <p class="portfolio__description">Un site web pour les étudiants de Math info .Il permet aux étudiants d'obtenir des ressources tels que les cours,td,examens et corrections.</p>
+            <a href="https://elisa734.github.io/exo_html/" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO 2 -->
+
+    <div class="portfolio__content grid swiper-slide">
+        <img src="./assests/images/" alt="" class="portfolio__img">
+
+        <div class="portfolio_">
+            <h3 class="portfolio__title">site de pointage</h3>
+            <p class="portfolio__description">permet aux éudiants de pointer leur présence.</p>
+            <a href="#" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- PORTFOLIO 3 -->
+
+    <div class="portfolio__content grid swiper-slide">
+        <img src="./assests/images/Capture d'écran portfolio.png" alt="" class="portfolio__img">
+
+        <div class="portfolio_">
+            <h3 class="portfolio__title">Portfolio</h3>
+            <p class="portfolio__description">Ce site</p>
+            <a href="#" class="button button--flex button--small portfolio__button">
+                Demo
+                <i class="uil uil-arrow-right button__icon"></i>
+            </a>
+        </div>
+    </div>
         </div>
 
-        </section>
+    <!-- add arrows-->
+    <div class="swiper-button-next">
+        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+    </div>
 
+    <div class="swiper-button-prev">
+        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+    </div>
+
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    
+
+</div>
+
+</section>
+
+        </div>
         <!-- PROJECT IN MIND -->
         <section class="project section">
 
@@ -534,14 +744,11 @@
             </div>
 
         </section>
-
-       
-
                 <!--Add pagination-->
                 <div class="swiper-pagination swiper-pagination-testimonial"></div>
             </div>
             </section>
-
+           
         <!-- CONTACT ME -->
         <section class="contact section" id="contact">
             <h2 class="section__title">Contactez moi</h2>
@@ -563,7 +770,7 @@
 
                         <div>
                             <h3 class="contact__title">E-mail</h3>
-                            <span class="contatc__subtitle">gnetoschiphra1@gmail.com</span>
+                            <span class="contatc__subtitle">gnetoschiphra@gmail.com</span>
                         </div>
                     </div>
 
@@ -577,35 +784,32 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form id="contactForm" class="contact__form grid" action="https://formspree.io/f/xyzwkgky" method="POST">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
-                            <label for="" class="contact__label">Nom</label>
-                            <input type="text" class="contact__input">
+                            <label for="contactName" class="contact__label">Nom</label>
+                            <input type="text" id="contactName" name="name" class="contact__input" required minlength="2">
                         </div>
-
                         <div class="contact__content">
-                            <label for="" class="contact__label">E-mail</label>
-                            <input type="email" class="contact__input">
+                            <label for="contactEmail" class="contact__label">E-mail</label>
+                            <input type="email" id="contactEmail" name="email" class="contact__input" required>
                         </div>
                     </div>
-
                     <div class="contact__content">
-                        <label for="" class="contact__label">Sujet</label>
-                        <input type="text" class="contact__input">
+                        <label for="contactSubject" class="contact__label">Sujet</label>
+                        <input type="text" id="contactSubject" name="subject" class="contact__input">
                     </div>
-
                     <div class="contact__content">
-                        <label for="" class="contact__label">Description</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <label for="contactMessage" class="contact__label">Description</label>
+                        <textarea id="contactMessage" name="message" cols="0" rows="7" class="contact__input contact__textarea" required minlength="15"></textarea>
                     </div>
-
                     <div>
-                        <a href="#" class="button button--flex">
-                            Send message
+                        <button type="submit" class="button button--flex">
+                            Envoyer le message
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </button>
                     </div>
+                    <div id="formResponse" class="contact__response"></div>
                 </form>
             </div>
 
@@ -614,7 +818,7 @@
 
     <!-- FOOTER -->
     <footer class="footer">
-
+         
         <div class="footer__bg">
             <div class="footer__container container grid">
                 <div>
