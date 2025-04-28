@@ -475,6 +475,7 @@ function initParticles() {
   });
 }
 
+
 /* ===== INITIALISATION AU CHARGEMENT ===== */
 document.addEventListener('DOMContentLoaded', () => {
   // Machine à écrire
@@ -497,6 +498,7 @@ document.addEventListener('DOMContentLoaded', () => {
   setupServicesModal();
   setupSkillsAccordion();
   setupIntersectionObserver();
+  initParticles();
 
   // Démarrer l'animation de texte
   if (typingElement) {

@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet" href="./assests/css/swiper-bundle.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assests/css/styles.css">
     <link rel="icon" type="image/png" href="assests/images/OIP.jpeg" sizes="20x20">
-   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
     <title>MonPortfolio</title>
 </head>
 <body>
@@ -651,77 +653,74 @@
         <!-- Ajoutez d'autres items selon vos besoins -->
       </div>
     </div>
-  </section>
-  <!-- PORTFOLIO -->
-  <section class="portfolio section" id="portfolio">
-
-    <h2 class="section__title">Sites web</h2>
-    <span class="section__subtitle">Mes sites recents</span>
-
-    <div class="portfolio__container container swiper-container">
-        <div class="swiper-wrapper">
-<!-- PORTFOLIO 1 -->
-
-    <div class="portfolio__content grid swiper-slide">
-        <img src="./assests/images/Capture d'écran archive.png" alt="" class="portfolio__img">
-
-        <div class="portfolio_">
-            <h3 class="portfolio__title">ARCHIVE-MI</h3>
-            <p class="portfolio__description">Un site web pour les étudiants de Math info .Il permet aux étudiants d'obtenir des ressources tels que les cours,td,examens et corrections.</p>
-            <a href="https://elisa734.github.io/exo_html/" class="button button--flex button--small portfolio__button">
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- PORTFOLIO 2 -->
-
-    <div class="portfolio__content grid swiper-slide">
-        <img src="./assests/images/" alt="" class="portfolio__img">
-
-        <div class="portfolio_">
-            <h3 class="portfolio__title">site de pointage</h3>
-            <p class="portfolio__description">permet aux éudiants de pointer leur présence.</p>
-            <a href="#" class="button button--flex button--small portfolio__button">
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-            </a>
-        </div>
-    </div>
-
-    <!-- PORTFOLIO 3 -->
-
-    <div class="portfolio__content grid swiper-slide">
-        <img src="./assests/images/Capture d'écran portfolio.png" alt="" class="portfolio__img">
-
-        <div class="portfolio_">
-            <h3 class="portfolio__title">Portfolio</h3>
-            <p class="portfolio__description">Ce site</p>
-            <a href="#" class="button button--flex button--small portfolio__button">
-                Demo
-                <i class="uil uil-arrow-right button__icon"></i>
-            </a>
-        </div>
-    </div>
-        </div>
-
-    <!-- add arrows-->
-    <div class="swiper-button-next">
-        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-    </div>
-
-    <div class="swiper-button-prev">
-        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-    </div>
-
-    <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
+    </section>
     
+            <!-- Portfolio Section web -->
 
-</div>
-
-</section>
+            <section class="portfolio section" id="portfolio">
+                <h2 class="section__title animate-this">Sites Web</h2>
+                <span class="section__subtitle animate-this">Mes Projets Récents</span>
+            
+                <div class="portfolio__container container swiper">
+                    <div class="swiper-wrapper">
+                        <!-- Portfolio 1 -->
+                        <div class="portfolio__content swiper-slide">
+                            <div class="portfolio__img-wrapper">
+                                <img src="./assests/images/Capture d'écran archive.png" alt="Capture d'écran du site ARCHIVE-MI" class="portfolio__img" onerror="this.src='./assests/images/fallback-screenshot.png'">
+                            </div>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">ARCHIVE-MI</h3>
+                                <p class="portfolio__description">Un site web dédié aux étudiants en Mathématiques-Informatique, offrant des ressources telles que des cours, TD, examens et corrections.</p>
+                                <a href="https://elisa734.github.io/exo_html/" target="_blank" class="button button--flex button--small portfolio__button">
+                                    Démo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <!-- Portfolio 2 -->
+                        <div class="portfolio__content swiper-slide">
+                            <div class="portfolio__img-wrapper">
+                                <img src="./assests/images/informatique.webp" alt="Capture d'écran du site de pointage" class="portfolio__img" onerror="this.src='./assets/images/fallback-screenshot.png'">
+                            </div>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Site de Pointage</h3>
+                                <p class="portfolio__description">Un site permettant aux étudiants d'enregistrer leur présence de manière simple et efficace.</p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Démo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+            
+                        <!-- Portfolio 3 -->
+                        <div class="portfolio__content swiper-slide">
+                            <div class="portfolio__img-wrapper">
+                                <img src="./assests/images/Capture d'écran portfolio.png" alt="Capture d'écran de ce portfolio" class="portfolio__img" onerror="this.src='./assets/images/fallback-screenshot.png'">
+                            </div>
+                            <div class="portfolio__data">
+                                <h3 class="portfolio__title">Portfolio Personnel</h3>
+                                <p class="portfolio__description">Ce site web, présentant mes projets et compétences en informatique et design graphique.</p>
+                                <a href="#" class="button button--flex button--small portfolio__button">
+                                    Démo
+                                    <i class="uil uil-arrow-right button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <!-- Navigation Arrows -->
+                    <div class="swiper-button-next">
+                        <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+                    </div>
+                    <div class="swiper-button-prev">
+                        <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+                    </div>
+            
+                    <!-- Pagination -->
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
 
         </div>
         <!-- PROJECT IN MIND -->
@@ -782,7 +781,7 @@
                     </div>
                 </div>
 
-                <form id="contactForm" class="contact__form grid" action="https://formspree.io/f/xyzwkgky" method="POST">
+                <form id="contactForm" class="contact__form grid" action="https://formspree.io/f/votre-id-unique" method="POST">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="contactName" class="contact__label">Nom</label>
@@ -799,7 +798,7 @@
                     </div>
                     <div class="contact__content">
                         <label for="contactMessage" class="contact__label">Description</label>
-                        <textarea id="contactMessage" name="message" cols="0" rows="7" class="contact__input contact__textarea" required minlength="15"></textarea>
+                        <textarea id="contactMessage" name="message" cols="0" rows="7" class="contact__input" required minlength="15"></textarea>
                     </div>
                     <div>
                         <button type="submit" class="button button--flex">
@@ -807,7 +806,7 @@
                             <i class="uil uil-message button__icon"></i>
                         </button>
                     </div>
-                    <div id="formResponse" class="contact__response"></div>
+                    <div id="formResponse" class="form__response"></div>
                 </form>
             </div>
 
