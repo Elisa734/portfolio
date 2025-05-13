@@ -474,7 +474,148 @@ function initParticles() {
     canvas.height = window.innerHeight;
   });
 }
-
+// JavaScript pour le carrousel de certificats
+document.addEventListener('DOMContentLoaded', function() {
+    // Variables pour le carrousel
+    const carousel = document.querySelector('.certificates__content');
+    const cards = document.querySelectorAll('.certificates__card');
+    const prevBtn = document.querySelector('.certificates__button-prev');
+    const nextBtn = document.querySelector('.certificates__button-next');
+    const pagination = document.querySelector('.certificates__pagination');
+    
+    let currentIndex = 0;
+    let cardWidth;
+    let maxIndex;
+    let cardsPerView;
+    
+    // Fonction pour initialiser le carrousel et calculer les dimensions
+    function initCarousel() {
+        // Calculer le nombre de cartes visibles selon la largeur d'écran
+        if (window.innerWidth >= 968) {
+            cardsPerView = 3; // 3 cartes sur desktop
+        } else if (window.innerWidth >= 768) {
+            cardsPerView = 2; // 2 cartes sur tablette
+        } else {
+            cardsPerView = 1; // 1 carte sur mobile
+        }
+        
+        cardWidth = carousel.parentElement.offsetWidth / cardsPerView;
+        maxIndex = cards.length - cardsPerView;
+        
+        // Définir la largeur fixe pour chaque carte
+        cards.forEach(card => {
+            card.style.minWidth = `${cardWidth}px`;
+        });
+        
+        // Créer les points de pagination
+        createPaginationDots();
+        
+        // Mettre à jour la position initiale
+        updateCarousel();
+    }
+    
+    // Fonction pour créer les points de pagination
+    function createPaginationDots() {
+        pagination.innerHTML = '';
+        
+        // Calculer le nombre de points nécessaires
+        const dotCount = Math.ceil(cards.length / cardsPerView);
+        
+        for (let i = 0; i < dotCount; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('certificates__pagination-dot');
+            
+            // Ajouter la classe active au premier point
+            if (i === 0) {
+                dot.classList.add('active');
+            }
+            
+            // Ajouter un event listener pour naviguer directement à une carte spécifique
+            dot.addEventListener('click', () => {
+                currentIndex = i * cardsPerView;
+                
+                // S'assurer que l'index ne dépasse pas le maximum
+                if (currentIndex > maxIndex) {
+                    currentIndex = maxIndex;
+                }
+                
+                updateCarousel();
+            });
+            
+            pagination.appendChild(dot);
+        }
+    }
+    
+    // Fonction pour mettre à jour la position du carrousel
+    function updateCarousel() {
+        // Calculer la translation pour le carrousel
+        const translateX = -currentIndex * cardWidth;
+        carousel.style.transform = `translateX(${translateX}px)`;
+        
+        // Mettre à jour les points de pagination
+        const dots = document.querySelectorAll('.certificates__pagination-dot');
+        const activeDotIndex = Math.floor(currentIndex / cardsPerView);
+        
+        dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === activeDotIndex);
+        });
+    }
+    
+    // Écouteurs d'événements pour les boutons de navigation
+    prevBtn.addEventListener('click', () => {
+        if (currentIndex > 0) {
+            currentIndex -= 1;
+            updateCarousel();
+        }
+    });
+    
+    nextBtn.addEventListener('click', () => {
+        if (currentIndex < maxIndex) {
+            currentIndex += 1;
+            updateCarousel();
+        }
+    });
+    
+    // Écouteur d'événement pour redimensionner le carrousel lors du changement de taille d'écran
+    window.addEventListener('resize', initCarousel);
+    
+    // Initialiser le carrousel au chargement
+    initCarousel();
+    
+    // Ajouter support pour les gestes de balayage (swipe) sur mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    carousel.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+    
+    carousel.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        handleGesture();
+    });
+    
+    function handleGesture() {
+        // Calculer la distance minimale pour considérer un swipe
+        const minSwipeDistance = 50;
+        
+        if (touchEndX < touchStartX - minSwipeDistance) {
+            // Swipe vers la gauche - aller à droite
+            if (currentIndex < maxIndex) {
+                currentIndex += 1;
+                updateCarousel();
+            }
+        }
+        
+        if (touchEndX > touchStartX + minSwipeDistance) {
+            // Swipe vers la droite - aller à gauche
+            if (currentIndex > 0) {
+                currentIndex -= 1;
+                updateCarousel();
+            }
+        }
+    }
+});
 
 /* ===== INITIALISATION AU CHARGEMENT ===== */
 document.addEventListener('DOMContentLoaded', () => {

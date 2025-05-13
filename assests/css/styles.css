@@ -263,6 +263,337 @@ img {
   height: auto;
 }
 
+/* Styles pour la section certificats avec carrousel et modal */
+.certificates__container {
+    position: relative;
+    max-width: 968px;
+    margin: 0 auto;
+    padding: 3rem 1rem;
+}
+
+/* Style du carrousel */
+.certificates__carousel {
+    overflow: hidden;
+    padding: 1rem 0;
+}
+
+.certificates__content {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+}
+
+/* Style des cartes de certificats */
+.certificates__card {
+    position: relative;
+    min-width: 280px;
+    flex: 0 0 calc(100% - 2rem);
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+    cursor: pointer;
+}
+
+.certificates__card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Overlay avec indication de clic */
+.certificates__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius: 0.5rem;
+    transition: opacity 0.3s;
+    z-index: 1;
+}
+
+.certificates__overlay span {
+    color: #fff;
+    font-size: var(--small-font-size);
+    font-weight: var(--font-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.certificates__card:hover .certificates__overlay {
+    opacity: 1;
+}
+
+.certificates__img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.certificates__name {
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    color: var(--title-color);
+    margin-bottom: 0.5rem;
+}
+
+.certificates__description {
+    font-size: var(--small-font-size);
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.certificates__info {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--smaller-font-size);
+    color: var(--text-color-light);
+}
+
+.certificates__date, 
+.certificates__platform {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+/* Boutons de navigation */
+.certificates__button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--first-color);
+    color: #FFF;
+    border-radius: 50%;
+    font-size: 1.25rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: 0.3s;
+}
+
+.certificates__button:hover {
+    background-color: var(--first-color-alt);
+}
+
+.certificates__button-prev {
+    left: 0;
+}
+
+.certificates__button-next {
+    right: 0;
+}
+
+.certificates__button-icon {
+    font-size: 1.25rem;
+}
+
+/* Pagination */
+.certificates__pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.certificates__pagination-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--text-color-light);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.certificates__pagination-dot.active {
+    background-color: var(--first-color);
+    width: 24px;
+    border-radius: 4px;
+}
+
+/* Modal */
+.certificates__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+}
+
+.certificates__modal.show-modal {
+    opacity: 1;
+    visibility: visible;
+}
+
+.certificates__modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    overflow: hidden;
+    background-color: var(--container-color);
+}
+
+.certificates__modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    background-color: var(--first-color);
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.25rem;
+    transition: background-color 0.3s;
+    z-index: 2;
+}
+
+.certificates__modal-close:hover {
+    background-color: var(--first-color-alt);
+}
+
+.certificates__modal-image-container {
+    width: 100%;
+    height: calc(90vh - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+.certificates__modal-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.certificates__modal-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background-color: var(--container-color);
+}
+
+.certificates__modal-download,
+.certificates__modal-prev,
+.certificates__modal-next {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-weight: var(--font-medium);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.certificates__modal-download {
+    background-color: var(--first-color);
+    color: #fff;
+}
+
+.certificates__modal-download:hover {
+    background-color: var(--first-color-alt);
+}
+
+.certificates__modal-prev,
+.certificates__modal-next {
+    background-color: var(--container-color);
+    color: var(--title-color);
+    border: 1px solid var(--border-color, #ddd);
+}
+
+.certificates__modal-prev:hover,
+.certificates__modal-next:hover {
+    background-color: var(--first-color-lighter);
+}
+
+/* Responsive */
+@media screen and (min-width: 568px) {
+    .certificates__card {
+        flex: 0 0 calc(50% - 2rem);
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .certificates__card {
+        flex: 0 0 calc(33.33% - 2rem);
+    }
+    
+    .certificates__button {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .certificates__button-prev {
+        left: -1.5rem;
+    }
+    
+    .certificates__button-next {
+        right: -1.5rem;
+    }
+}
+
+@media screen and (min-width: 968px) {
+    .certificates__card {
+        flex: 0 0 calc(25% - 2rem);
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .certificates__modal {
+        padding: 1rem;
+    }
+    
+    .certificates__modal-image-container {
+        height: calc(90vh - 150px);
+    }
+    
+    .certificates__modal-buttons {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+    
+    .certificates__modal-download {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
 /* REUSABLE CLASSES */
 .section {
   padding: 2rem 0 4rem;
